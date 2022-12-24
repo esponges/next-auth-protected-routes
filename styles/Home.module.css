@@ -1,7 +1,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
@@ -78,6 +78,11 @@
   align-items: center;
   position: relative;
   padding: 4rem 0;
+  text-align: center;
+}
+
+.center > * > * {
+  margin-top: 2rem;
 }
 
 .center::before {
@@ -93,15 +98,6 @@
   width: 240px;
   height: 180px;
   z-index: -1;
-}
-
-.center::before,
-.center::after {
-  content: '';
-  left: 50%;
-  position: absolute;
-  filter: blur(45px);
-  transform: translateZ(0);
 }
 
 .logo,
