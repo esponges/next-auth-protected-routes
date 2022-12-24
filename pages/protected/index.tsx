@@ -5,11 +5,12 @@ const ProtectedPage = () => {
   return (
     <div>
       <h1>Protected Page</h1>
-      {/* <p>Hi {user?.name}!</p> */}
+      <p>Hi {session?.user?.name}!</p>
     </div>
   );
 };
 
+// add the requireAuth property to the page component
 ProtectedPage.requireAuth = true;
 
 export default ProtectedPage;

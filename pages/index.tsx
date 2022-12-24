@@ -2,6 +2,7 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { signIn, useSession, signOut } from 'next-auth/react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   const { data } = useSession();
@@ -27,7 +28,7 @@ export default function Home() {
           {!data ? (
             <div>
               <h1>Not logged in</h1>
-              <button style={{ marginRight: '2rem' }} onClick={handleLogin}>
+              <button onClick={handleLogin}>
                 Login
               </button>
             </div>
@@ -46,6 +47,13 @@ export default function Home() {
               <button onClick={handleLogout}>Logout</button>
             </div>
           ) : null}
+          <div style={{ marginTop: '2rem' }}>
+            <Link href='/protected'>
+              <button>
+                Navigate to the Protected page
+              </button>
+            </Link>
+          </div>
         </div>
       </main>
     </>

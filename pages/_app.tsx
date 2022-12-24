@@ -10,6 +10,7 @@ type AppPropsWithAuth = AppProps & {
   };
 };
 
+// _app.tsx
 export default function App({ Component, pageProps }: AppPropsWithAuth) {
   return <SessionProvider session={pageProps.session}>
     {Component.requireAuth ? (
