@@ -28,9 +28,11 @@ export default function Home() {
           {!data ? (
             <div>
               <h1>Not logged in</h1>
-              <button onClick={handleLogin}>
-                Login
-              </button>
+              <Link href='/auth/signIn'>
+                <button>
+                  Login
+                </button>
+              </Link>
             </div>
           ) : null}
           {data?.user?.name ? (
